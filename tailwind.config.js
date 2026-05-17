@@ -7,10 +7,12 @@ export default {
   theme: {
     extend: {
       colors: {
-        'neon-purple': '#8A2BE2',
-        'neon-lilac': '#DDA0DD',
-        'dark-charcoal': '#111111',
-        'deep-black': '#050505',
+        'brand-bg': '#13110E',
+        'brand-card': '#171311',
+        'brand-primary': '#E7DFD2',
+        'brand-secondary': '#A79E93',
+        'brand-accent': '#B79A6A',
+        'brand-mineral': '#CFC2B1',
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],

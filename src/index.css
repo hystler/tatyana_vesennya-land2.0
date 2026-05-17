@@ -2,30 +2,56 @@
 @tailwind components;
 @tailwind utilities;
 
+/* === GLOBAL CURSOR HIDE — prevents double cursor === */
+html, html * {
+  cursor: none !important;
+}
+
 @layer base {
   body {
-    @apply bg-deep-black text-white m-0 p-0 overflow-x-hidden;
-    cursor: none;
+    @apply bg-brand-bg text-brand-primary m-0 p-0 overflow-x-hidden;
+    cursor: none !important;
   }
   
-  a, button, input, textarea {
-    cursor: none;
+  a, button, input, textarea, [role="button"] {
+    cursor: none !important;
   }
+
+  ::selection {
+    background-color: #B79A6A;
+    color: #0B0908;
+  }
+}
+
+/* === BACKGROUND TEXTURE LAYER === */
+.bg-texture-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0.03;
+  background-image: url('./assets/bg_texture.jpg');
+  background-repeat: repeat;
+  background-attachment: fixed;
+  mix-blend-mode: overlay;
 }
 
 /* Custom Scrollbar for premium feel */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: #050505;
+  background: #0B0908;
 }
 ::-webkit-scrollbar-thumb {
-  background: #222;
+  background: #171311;
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #8A2BE2;
+  background: #B79A6A;
 }
 
 /* Glassmorphism utilities */
